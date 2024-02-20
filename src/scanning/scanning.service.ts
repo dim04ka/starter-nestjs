@@ -22,8 +22,8 @@ export class ScanningService {
   // @Cron(CronExpression.EVERY_5_MINUTES)
   async handleScanData() {
     // await this.startScanning();
-    // await this.firestoreData();
-    // await this.getBotUpdates();
+    await this.firestoreData();
+    await this.getBotUpdates();
   }
 
   async startScanning() {
