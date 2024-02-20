@@ -4,7 +4,7 @@ import axios from 'axios';
 import { delay, getCurrentDate, getCurrentTime } from '../helper';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AppService } from '../app.service';
-import { Cron, CronExpression } from '@nestjs/schedule';
+// import { Cron, CronExpression } from '@nestjs/schedule';
 import { FirestoreService } from '../firestore/firestore.service';
 import { v4 as uuidv4 } from 'uuid';
 import * as dotenv from 'dotenv';
@@ -19,11 +19,11 @@ export class ScanningService {
     private db: FirestoreService,
   ) {}
 
-  @Cron(CronExpression.EVERY_5_MINUTES)
+  // @Cron(CronExpression.EVERY_5_MINUTES)
   async handleScanData() {
-    await this.startScanning();
-    await this.firestoreData();
-    await this.getBotUpdates();
+    // await this.startScanning();
+    // await this.firestoreData();
+    // await this.getBotUpdates();
   }
 
   async startScanning() {
